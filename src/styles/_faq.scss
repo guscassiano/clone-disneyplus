@@ -20,6 +20,8 @@
             cursor: pointer;
             position: relative;
 
+
+
             &::after {
                 content: '+';
                 position: absolute;
@@ -29,6 +31,10 @@
                 display: flex;
                 align-items: center;
                 font-size: 40px;
+
+                @media (max-width: 768px) {
+                    content: '';
+                }
             }
         }
 
@@ -44,12 +50,16 @@
             .faq__questions__item__question::after {
                 content: '-';
                 font-size: 70px;
+
+                @media (max-width: 768px) {
+                    content: '';
+                }
             }
 
             .faq__questions__item__answer {
                 height: auto;
                 padding-bottom: 24px;
-                transition: all 0.2s ease;
+                transition: all 0.5s ease;
                 
                 li {
                     margin: 14px 42px;
